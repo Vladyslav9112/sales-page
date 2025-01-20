@@ -1,0 +1,372 @@
+<?php
+session_start();
+$period_cookie = 2592000; // 30 днів (2592000 секунд)
+ 
+if($_GET){
+    setcookie("utm_source",$_GET['utm_source'],time()+$period_cookie);
+    setcookie("utm_medium",$_GET['utm_medium'],time()+$period_cookie);
+    setcookie("utm_term",$_GET['utm_term'],time()+$period_cookie);
+    setcookie("utm_content",$_GET['utm_content'],time()+$period_cookie);
+    setcookie("utm_campaign",$_GET['utm_campaign'],time()+$period_cookie);
+}
+ 
+if(!isset($_SESSION['utms'])) {
+    $_SESSION['utms'] = array();
+    $_SESSION['utms']['utm_source'] = '';
+    $_SESSION['utms']['utm_medium'] = '';
+    $_SESSION['utms']['utm_term'] = '';
+    $_SESSION['utms']['utm_content'] = '';
+    $_SESSION['utms']['utm_campaign'] = '';
+}
+$_SESSION['utms']['utm_source'] = $_GET['utm_source'] ? $_GET['utm_source'] : $_COOKIE['utm_source'];
+$_SESSION['utms']['utm_medium'] = $_GET['utm_medium'] ? $_GET['utm_medium'] : $_COOKIE['utm_medium'];
+$_SESSION['utms']['utm_term'] = $_GET['utm_term'] ? $_GET['utm_term'] : $_COOKIE['utm_term'];
+$_SESSION['utms']['utm_content'] = $_GET['utm_content'] ? $_GET['utm_content'] : $_COOKIE['utm_content'];
+$_SESSION['utms']['utm_campaign'] = $_GET['utm_campaign'] ? $_GET['utm_campaign'] : $_COOKIE['utm_campaign'];
+?>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=480">
+    <link rel="icon" type="image/x-icon" href="/icons/favicon-32x32.png" />
+    <title>PRIME-НАЙКРАЩА ЯКІСТЬ</title>
+    <link rel="stylesheet" href="/css/style.css/style.css" />
+    <link rel="stylesheet" href="/css/style.css/stylenull.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <section class="header__item">
+          <img src="/img/13.png" alt="" class="header__img img" />
+        </section>
+      </header>
+      <main class="main">
+        <section class="deal-countdown-section">
+          <div class="price">
+            <div class="price__old">
+              <p class="price__old-text">Звичайна ціна:</p>
+              <p class="price__old-cost"><strong>599грн.</strong></p>
+            </div>
+            <div class="price__promotion">Акція:</div>
+            <div class="price__new">
+              <p class="price__new-text"><strong>Ціна сьогодні:</strong></p>
+              <p class="price__new-cost"><strong>299грн.</strong></p>
+            </div>
+          </div>
+          <div class="timer">
+            <h2 class="timer-title">Пропозиція діє:</h2>
+            <div class="timer-container">
+              <div class="timer-box">
+                <div class="timer__numbers">
+                  <div class="digit" id="hours-tens">0</div>
+                  <div class="digit" id="hours-units">3</div>
+                </div>
+                <span class="timer-label">ГОДИН</span>
+              </div>
+              <div class="timer-box">
+                <div class="timer__numbers">
+                  <div class="digit" id="minutes-tens">1</div>
+                  <div class="digit" id="minutes-units">9</div>
+                </div>
+                <span class="timer-label">ХВИЛИН</span>
+              </div>
+              <div class="timer-box">
+                <div class="timer__numbers">
+                  <div class="digit" id="seconds-tens">5</div>
+                  <div class="digit" id="seconds-units">7</div>
+                </div>
+                <span class="timer-label">СЕКУНД</span>
+              </div>
+            </div>
+          </div>
+          <div class="info-order">
+            <div class="info-order__list">
+              <ul class="list__items">
+                <li class="list__items-item">
+                  Європейська якість.Виробник: НІМЕЧЧИНА
+                </li>
+                <li class="list__items-item">Не пошкоджує поверхні</li>
+                <li class="list__items-item">Моментальна взаємодія з брудом</li>
+              </ul>
+            </div>
+            <button class="button scrollToOrder">Оформити замовлення</button>
+            <p class="info-order__text">
+              Залишилося
+              <span class="info-order__text-number">4</span> комплектів по акції
+            </p>
+          </div>
+        </section>
+        <section class="advantages">
+          <div class="advantages__surfaces">
+            <img src="/img/22p.gif" alt="" class="advantages__img" />
+            <div class="advantages__info">
+              <p class="advantages__text">
+                Засіб швидко і легко очищає:
+                <strong
+                  >жир, масло, розлучення і сліди від пальців з поверхні плити,
+                  конфорок, витяжки над плитою, мікрохвильової печі, каструль,
+                  сковорідок, холодильника, керамічної плитки, нержавіючої
+                  сталі, емальованих і алюмінієвих поверхонь.</strong
+                ><br />
+                <span class="advantages__text-span"
+                  >Ефективно впливає на застарілі забруднення і при постійному
+                  застосуванні перешкоджає появі нових.</span
+                >
+              </p>
+              <p class="advantages__value"><strong>Обʼєм:</strong> 500мл</p>
+              <p class="advantages__benefits">3 за ціною <span>1</span></p>
+            </div>
+          </div>
+          <div class="advantages__crokery">
+            <img src="/img/33p.gif" alt="" class="advantages__img" />
+            <div class="advantages__info">
+              <p class="advantages__text">
+                <strong>Властивості:</strong> Готовий до вживання засіб
+                ефективно видаляє цвіль (грибок) з різних видів поверхонь:
+                кахель, межкахельні шви, камінь, штукатурка, шпалери, шкіра,
+                поверхні душових кабін, фіранок, перегородок. Засіб
+                використовується для боротьби з цвіллю в підвальних приміщеннях,
+                гаражах, лазнях, саунах, на внутрішніх і зовнішніх поверхнях
+                приміщень, віконних з'єднань. Можливість обробки холодильного
+                обладнання з метою профілактики і знищення цвілевих грибів на
+                його внутрішніх і зовнішніх поверхнях.
+              </p>
+              <p class="advantages__text">
+                <strong>Спосіб використання:</strong> рясно змочити засобом
+                пошкоджені поверхні і витримати 30-60 хв. Всі відшарувані
+                частинки обережно зняти щіткою або губкою після обробки. Після
+                чого змити поверхні проточною водою.
+              </p>
+              <p class="advantages__value"><strong>Обʼєм:</strong> 500мл</p>
+              <p class="advantages__benefits">Чисті <span>труби</span></p>
+            </div>
+          </div>
+          <div class="advantages__pipes">
+            <img src="/img/44p.gif" alt="" class="advantages__img" />
+            <div class="advantages__info">
+              <p class="advantages__text">
+                <strong>Властивості: </strong> Порошок у гранулах для очищення
+                труб ефективно розчиняє тверді (органічні) домішки, відмиває всі
+                засмічення в трубах і стоках. Знищує бактерії, вирішує проблему
+                неприємного запаху. Засіб не ушкоджує ущільнення на
+                каналізаційних з'єднаннях. Підходить для очищення труб різни
+                типів як металевих, так і поліпропіленових.
+              </p>
+              <p class="advantages__text">
+                <strong>Спосіб використання: </strong>всього одна столова ложка
+                усуне Ваш побутовий клопіт. Повільно висипте 1 столову ложку
+                порошку на стік і додайте приблизно 200 мл холодної води.
+                Залиште на 5 хвилин при відкритому зливі, потім ретельно
+                промийте холодною водою.
+              </p>
+              <p class="advantages__value"><strong>Вага:</strong> 100г</p>
+              <button class="button scrollToOrder">Оформити замовлення</button>
+            </div>
+          </div>
+        </section>
+        <section class="feedback">
+          <h2 class="feedback__title title">Відгуки <span>покупців</span></h2>
+          <div class="feedback__items">
+            <div class="feedback__block">
+              <div class="feeback__block__items">
+                <h3 class="feedback__block__title">Чудовий комплект</h3>
+                <p class="feedback__text">
+                  Купив цей комплект для жінки. 1 покупкою закрив усі потреби
+                  вдома по хімії. Жінка відмила як і кухню так і ванну, якість
+                  реально європейська.
+                </p>
+                <div class="feedback__user">
+                  <img
+                    src="/img/feed-img1_9e76_25.png"
+                    alt=""
+                    class="feedback__user-photo"
+                  />
+                  <div class="feedback__user-info">
+                    <p class="feedback__user-info-name">Олександр Кравчук</p>
+                    <p class="feedback__user-info-age">29 років</p>
+                  </div>
+                  <img
+                    src="/icons/quote1-icon_4b62_37.png"
+                    alt=""
+                    class="feedback__user-icon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="feedback__block">
+              <div class="feeback__block__items">
+                <h3 class="feedback__block__title">Працює відмінно</h3>
+                <p class="feedback__text">
+                  Переїхала в нову квартиру, а тут такий бардак. Рішила однією
+                  посилкую заказать ці засоби, бо подруга посовітувала. Якість
+                  реально здивувала, все відстає за перші секунди нанесення.
+                  <br />
+                  Рекомендую!
+                </p>
+                <div class="feedback__user">
+                  <img
+                    src="/img/feed-img2_f962_26.png"
+                    alt=""
+                    class="feedback__user-photo"
+                  />
+                  <div class="feedback__user-info">
+                    <p class="feedback__user-info-name">Світлана Мельник</p>
+                    <p class="feedback__user-info-age">49 років</p>
+                  </div>
+                  <img
+                    src="/icons/quote1-icon_4b62_37.png"
+                    alt=""
+                    class="feedback__user-icon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="feedback__block">
+              <div class="feeback__block__items">
+                <h3 class="feedback__block__title">Незамінний комплект</h3>
+                <p class="feedback__text">
+                  Замовив цей комплект для дому, і це було чудове рішення! Люблю
+                  вибирати все по співвідноженні ціна - якість. Тут попав в
+                  точку. Засоби ідеально працюють!
+                </p>
+                <div class="feedback__user">
+                  <img
+                    src="/img/feed-img3_9200_27.png"
+                    alt=""
+                    class="feedback__user-photo"
+                  />
+                  <div class="feedback__user-info">
+                    <p class="feedback__user-info-name">Василь Пронь</p>
+                    <p class="feedback__user-info-age">35 років</p>
+                  </div>
+                  <img
+                    src="/icons/quote1-icon_4b62_37.png"
+                    alt=""
+                    class="feedback__user-icon"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="process-info">
+          <div class="process-info">
+            <div class="process-info-items">
+              <div class="request-block">
+                <div class="request-text">
+                  <h4 class="request-title"><strong>Заявка</strong></h4>
+                  <p>Заповніть форму на сайті</p>
+                </div>
+                <div>
+                  <img
+                    src="/icons/order-steps-step1-i_271a_28.png"
+                    alt=""
+                    class="request-icon"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="call-block">
+              <div class="call-text">
+                <h4 class="call-title"><strong>Дзвінок</strong></h4>
+                <p>Наш менеджер передзвонить для уточнення деталей</p>
+              </div>
+              <div>
+                <img
+                  src="/icons/order-steps-step2-i_abd7_29.png"
+                  alt=""
+                  class="call-icon"
+                />
+              </div>
+            </div>
+            <div class="dispatch-block">
+              <div class="dispatch-text">
+                <h4 class="dispatch-title"><strong>Відправлення</strong></h4>
+                <p>Доставляємо ваш товар протягом 1-2 днів</p>
+              </div>
+              <div>
+                <img
+                  src="/icons/order-steps-step3-i_6217_30.png"
+                  alt=""
+                  class="dispatch-icon"
+                />
+              </div>
+            </div>
+            <div class="receiving-block">
+              <div class="receiving-text">
+                <h4 class="receiving-title"><strong>Отримання</strong></h4>
+                <p>Оплачуєте при отриманні на пошті</p>
+              </div>
+              <div>
+                <img
+                  src="/icons/order-steps-step4-i_96cc_31.png"
+                  alt=""
+                  class="receiving-icon"
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="promo-block">
+          <div class="promo-block__item">
+            <div class="promoblock__img">
+              <img src="/img/13.png" alt="" class="img" />
+            </div>
+            <div class="price">
+              <div class="price__old">
+                <p class="price__old-text">Звичайна ціна:</p>
+                <p class="price__old-cost"><strong>599грн.</strong></p>
+              </div>
+              <div class="price__promotion">Акція:</div>
+              <div class="price__new">
+                <p class="price__new-text"><strong>Ціна сьогодні:</strong></p>
+                <p class="price__new-cost"><strong>299грн.</strong></p>
+              </div>
+            </div>
+            <div class="promo-block__form">
+              <form id="order" action="form-ok.php" method="post">
+                  <input type="hidden" name = 's1' class = "price_filed_s1" value = "<?php echo $price_new ?>">
+<input type="hidden" name = 's2' class = "price_filed_s2" value = "<?= $product_id ?>">
+<input type="hidden" name = 's3' class = "price_filed_s3" value = "<?= $product_name ?>">
+                <input type="text" name="name" placeholder="Введіть ваше ім'я" class="input-group input-group-name" required>
+                <input type="tel" name="phone" placeholder="Введіть ваш телефон" class="input-group input-group-tel" required>
+                <button type="submit" class="button">Оформити замовлення</button>
+              </form>
+              <p class="promo-block__form-text">
+                Залишилося
+                <span>4</span> комплектів по акції
+              </p>
+            </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <ul class="footer__list">
+          <li class="footer__list__item">
+            <a href="/politics.html" class="footer__list__item__link"
+              >Политика конфіденційності</a
+            >
+          </li>
+          <li class="footer__list__item">
+            <a href="/agreement.html" class="footer__list__item__link"
+              >Угода користувача</a
+            >
+          </li>
+          <li class="list__item">
+            <a href="/garantiya.html" class="footer__list__item__link"
+              >Гарантія та повернення</a
+            >
+          </li>
+        </ul>
+      </footer>
+    </div>
+    <div class="fast-delivery-widget__light" id="widget">
+      <div class="fast-delivery-widget__light__text">
+        <p class="fast-delivery-widget__light__title">Швидка доставка</p>
+        <p class="fast-delivery-widget__light__subtitle">в Ваше місто</p>
+      </div>
+      <div class="fast-delivery-widget__light__close" id="closeWidget"></div>
+    </div>
+  </body>
+</html>
