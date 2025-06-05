@@ -47,23 +47,11 @@ body {
   color: #333;
   text-decoration: line-through;
 }
-/*.price__promotion {*/
-/*    display: block;*/
-/*  color: white;*/
-/*  background-image: url(/img/offer2-discount-bg_7250_33.png);*/
-/*  width: 176px;*/
-/*  height: 92px;*/
-/*  position: relative;*/
-/*  text-align: center;*/
-/*  align-content: center;*/
-  /*top: -9px;*/
-/*  left: -30%;*/
-/*  z-index: 2;*/
-/*}*/
+
 .price__promotion {
   display: block;
   color: white;
-  background-image: url(/img/offer2-discount-bg_7250_33.png); /* Встановіть кольоровий фон, якщо фонове зображення не потрібне */
+  background-image: url("/assets/img/background-action.png"); /* Встановіть кольоровий фон, якщо фонове зображення не потрібне */
   width: 176px;
   height: 92px;
   position: absolute; /* Абсолютне позиціонування для розміщення над іншими елементами */
@@ -175,7 +163,7 @@ body {
 }
 
 .button {
-    display: block;
+  display: block;
   margin: 10px auto;
   width: 350px;
   border-radius: 40px;
@@ -227,7 +215,7 @@ body {
   margin: 15px 0 0;
   width: 62px;
   height: 5px;
-  background-image: url(/icons/separator-red_2e1d_32.png);
+  background-image: url("/assets/icons/line.png");
   background-position: center;
   background-repeat: no-repeat;
   top: 38px;
@@ -271,7 +259,7 @@ body {
   margin: 15px 0 0;
   width: 62px;
   height: 5px;
-  background-image: url(/icons/separator-red_2e1d_32.png);
+  background-image: url("/assets/icons/line.png");
   background-position: center;
   background-repeat: no-repeat;
   top: 30px;
@@ -323,7 +311,11 @@ body {
 .process-info:before {
   content: "";
   position: absolute;
-  background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(2, 2, 2, 0.1) 100%);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(2, 2, 2, 0.1) 100%
+  );
   top: -20px;
   width: 100%;
   height: 20px;
@@ -332,7 +324,11 @@ body {
 .process-info::after {
   content: "";
   position: absolute;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0) 0%, rgba(2, 2, 2, 0.1) 100%);
+  background-image: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(2, 2, 2, 0.1) 100%
+  );
   bottom: -20px;
   width: 100%;
   height: 20px;
@@ -345,7 +341,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 110px;
-  background-image: url(/img/order-steps1-step1_fa1d_38.png);
+  background-image: url("/assets/img/order-step1.png");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -370,7 +366,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 110px;
-  background-image: url(/img/order-steps1-step2_92c3_39.png);
+  background-image: url("/assets/img/order-step2.png");
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -392,7 +388,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 110px;
-  background-image: url(/img/order-steps1-step3_f0fb_40.png);
+  background-image: url("/assets/img/order-step3.png");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -417,7 +413,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 110px;
-  background-image: url(/img/order-steps1-step4_a9a2_41.png);
+  background-image: url("/assets/img/order-step4.png");
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -448,7 +444,7 @@ body {
   border-radius: 5px;
   padding-left: 62px;
   padding-right: 40px;
-  background-image: url(/icons/offer-name-icon_97ab_34.png);
+  background-image: url("/assets/icons/input-name.png");
   background-repeat: no-repeat;
   background-position: 10px center;
   background-size: 25px 25px;
@@ -460,7 +456,7 @@ body {
   border-radius: 5px;
   padding-left: 62px;
   padding-right: 40px;
-  background-image: url(/icons/offer-phone-icon_85b9_35.png);
+  background-image: url("/assets/icons/input-phone.png");
   background-repeat: no-repeat;
   background-position: 10px center;
   background-size: 25px 25px;
@@ -500,7 +496,7 @@ body {
 .fast-delivery-widget__light {
   background-color: #fff;
   color: #333;
-  background-image: url(/icons/box.png);
+  background-image: url("/assets/icons/box.png");
   background-repeat: no-repeat;
   background-position: 15px center;
   position: fixed;
@@ -527,7 +523,8 @@ body {
   position: relative;
   cursor: pointer;
 }
-.fast-delivery-widget__light__close::after, .fast-delivery-widget__light__close::before {
+.fast-delivery-widget__light__close::after,
+.fast-delivery-widget__light__close::before {
   content: "";
   position: absolute;
   top: -40px;
@@ -542,7 +539,7 @@ body {
 }
 .fast-delivery-widget__light__close::before {
   transform: translate(-50%, -50%) rotate(45deg);
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
 
 @media (max-width: 768px) {
   .button {
