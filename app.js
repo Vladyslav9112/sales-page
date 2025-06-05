@@ -12,7 +12,6 @@ function startEndOfDayTimer() {
     const minutes = Math.floor((remainingTime % 3600) / 60);
     const seconds = remainingTime % 60;
 
-    // Розділяємо числа на десятки й одиниці
     document.getElementById("hours-tens").textContent = Math.floor(hours / 10);
     document.getElementById("hours-units").textContent = hours % 10;
 
@@ -50,6 +49,54 @@ closeWidget.addEventListener("click", function () {
   widget.style.display = "none";
 });
 
+const UTM_KEYS = [
+  "utm_source",
+  "utm_medium",
+  "utm_term",
+  "utm_content",
+  "utm_campaign",
+];
 
+function getUTMParamsFromURL() {
+  const params = new URLSearchParams(window.location.search);
+  const result = {};
+  UTM_KEYS.forEach((key) => {
+    const value = params.get(key);
+    if (value) {
+      result[key] = value;
+      localStorage.setItem(key, value);
+    }
+  });
+  return result;
+}
 
+function getUTMParamsFromStorage() {
+  const result = {};
+  UTM_KEYS.forEach((key) => {
+    const value = localStorage.getItem(key);
+    if (value) {
+      result[key] = value;
+    }
+  });
+  return result;
+}
 
+function setHiddenFieldsFromUTM(form, utmData) {
+  if (!form) return;
+  const s1 = form.querySelector(".price_filed_s1");
+  const s2 = form.querySelector(".price_filed_s2");
+  const s3 = form.querySelector(".price_filed_s3");
+
+  if (s1) s1.value = utmData.utm_source || "";
+  if (s2) s2.value = utmData.utm_campaign || "";
+  if (s3) s3.value = utmData.utm_medium || "";
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  const urlUTM = getUTMParamsFromURL();
+  const storedUTM = getUTMParamsFromStorage();
+  const utm = { ...storedUTM, ...urlUTM };
+
+  const form = document.querySelector("#order");
+  setHiddenFieldsFromUTM(form, utm);
+});
