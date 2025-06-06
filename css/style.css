@@ -51,7 +51,7 @@ body {
 .price__promotion {
   display: block;
   color: white;
-  background-image: url("/assets/img/background-action.png"); /* Встановіть кольоровий фон, якщо фонове зображення не потрібне */
+  background-image: url("/sales-page/assets/img/background-action.png"); /* Встановіть кольоровий фон, якщо фонове зображення не потрібне */
   width: 176px;
   height: 92px;
   position: absolute; /* Абсолютне позиціонування для розміщення над іншими елементами */
@@ -215,7 +215,7 @@ body {
   margin: 15px 0 0;
   width: 62px;
   height: 5px;
-  background-image: url("/assets/icons/line.png");
+  background-image: url("/sales-page/assets/icons/line.png");
   background-position: center;
   background-repeat: no-repeat;
   top: 38px;
@@ -259,7 +259,7 @@ body {
   margin: 15px 0 0;
   width: 62px;
   height: 5px;
-  background-image: url("/assets/icons/line.png");
+  background-image: url("/sales-page/assets/icons/line.png");
   background-position: center;
   background-repeat: no-repeat;
   top: 30px;
@@ -341,7 +341,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 110px;
-  background-image: url("/assets/img/order-step1.png");
+  background-image: url("/sales-page/assets/img/order-step1.png");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -366,7 +366,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 110px;
-  background-image: url("/assets/img/order-step2.png");
+  background-image: url("/sales-page/assets/img/order-step2.png");
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -388,7 +388,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 110px;
-  background-image: url("/assets/img/order-step3.png");
+  background-image: url("/sales-page/assets/img/order-step3.png");
   background-repeat: no-repeat;
   background-position: right;
 }
@@ -413,7 +413,7 @@ body {
   align-items: center;
   background-color: #fff;
   height: 110px;
-  background-image: url("/assets/img/order-step4.png");
+  background-image: url("/sales-page/assets/img/order-step4.png");
   background-repeat: no-repeat;
   background-position: left;
 }
@@ -444,7 +444,7 @@ body {
   border-radius: 5px;
   padding-left: 62px;
   padding-right: 40px;
-  background-image: url("/assets/icons/input-name.png");
+  background-image: url("/sales-page/assets/icons/input-name.png");
   background-repeat: no-repeat;
   background-position: 10px center;
   background-size: 25px 25px;
@@ -456,7 +456,7 @@ body {
   border-radius: 5px;
   padding-left: 62px;
   padding-right: 40px;
-  background-image: url("/assets/icons/input-phone.png");
+  background-image: url("/sales-page/assets/icons/input-phone.png");
   background-repeat: no-repeat;
   background-position: 10px center;
   background-size: 25px 25px;
