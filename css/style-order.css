@@ -1,0 +1,71 @@
+@import url(style-order.css);
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+.thank-you {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Poppins", serif;
+  font-family: Montserrat;
+  font-weight: 400;
+  line-height: 22px;
+  font-style: 15px;
+}
+.thank-you__title {
+  color: rgb(10, 161, 80);
+  font-size: 36px;
+}
+.thank-you__button {
+  background: transparent linear-gradient(to bottom, rgb(13, 181, 57) 0%, rgb(0, 144, 67) 100%) repeat scroll 0 0;
+  border: none;
+  border-bottom: 2px solid rgb(21, 90, 53);
+  outline: 0 none;
+  padding: 15px 25px;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 4px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+}
+.thank-you__button:hover {
+  top: -2px;
+}/*# sourceMappingURL=style-order.css.map */
+.error {
+  background-color: #f8d7da; /* Червоне тло для позначення помилки */
+  color: #721c24; /* Темно-червоний текст */
+  border: 1px solid #f5c6cb; /* М'яка червона рамка */
+  border-radius: 5px; /* Закруглені кути */
+  padding: 20px; /* Відступи для внутрішнього вмісту */
+  max-width: 500px; /* Максимальна ширина блоку */
+  margin: 50px auto; /* Вирівнювання по центру сторінки */
+  text-align: center; /* Текст по центру */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Легке затінення */
+}
+
+.error__title {
+  font-size: 24px; /* Розмір заголовка */
+  font-weight: bold; /* Жирний текст */
+  margin-bottom: 10px; /* Відступ під заголовком */
+}
+
+.error__notice {
+  font-size: 16px; /* Звичайний текст */
+  margin-bottom: 20px; /* Відступ перед кнопкою */
+  line-height: 1.5; /* Поліпшення читабельності */
+}
+
+.error__button {
+  display: inline-block; /* Кнопка виглядає як елемент */
+  background-color: #f44336; /* Яскравий червоний колір кнопки */
+  color: #fff; /* Білий текст */
+  padding: 10px 20px; /* Відступи всередині кнопки */
+  font-size: 16px; /* Розмір тексту */
+  text-decoration: none; /* Прибрати підкреслення */
+  border-radius: 5px; /* Закруглені кути */
+  transition: background-color 0.3s; /* Ефект переходу */
+}
+
+.error__button:hover {
+  background-color: #d32f2f; /* Темніший червоний колір при наведенні */
+}
